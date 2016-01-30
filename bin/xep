@@ -2,5 +2,10 @@
 
 'use strict';
 
-var path = require('path');
-require(path.join(__dirname, '..', 'lib', 'command')).run(process.argv);
+let commands = require('../lib/commands');
+let error    = require('../lib/error');
+
+let cmd = commands[process.argv[2]];
+cmd = cmd || commands.help;
+cmd.run(process.argv)
+.catch(error.handle);
