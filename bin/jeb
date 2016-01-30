@@ -5,8 +5,16 @@
 let Promise  = require('bluebird');
 let commands = require('../lib/commands');
 let error    = require('../lib/error');
+let log      = require('npmlog');
+let config   = require('../lib/config');
+let minimist = require('minimist');
 
-let cmd = commands[process.argv[2]];
+let args = minimist(process.argv.slice(2));
+
+log.level = args.loglevel || config.loglevel;
+
+let cmd = commands[args._[0]];
 cmd = cmd || commands.help;
-Promise.resolve(cmd.run(process.argv))
+
+Promise.resolve(cmd.run(args))
 .catch(error.handle);

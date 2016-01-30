@@ -11,10 +11,13 @@
     "archy": "1.0.0",
     "bluebird": "3.1.5",
     "chalk": "1.1.1",
+    "find-root": "0.1.1",
     "got": "6.1.1",
     "lodash": "4.1.0",
+    "minimist": "1.2.0",
     "mkdirp": "0.5.1",
     "mz": "2.2.0",
+    "npmlog": "2.0.2",
     "osenv": "0.1.3",
     "semver": "5.1.0"
   }
