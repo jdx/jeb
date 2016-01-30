@@ -28,7 +28,8 @@
   "unused": true,
   "globals": {
     "cli": true,
-    "expect": true
+    "expect": true,
+    "Promise": true
   },
   "predef": [
     "$",

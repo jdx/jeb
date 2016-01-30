@@ -2,10 +2,11 @@
 
 'use strict';
 
+let Promise  = require('bluebird');
 let commands = require('../lib/commands');
 let error    = require('../lib/error');
 
 let cmd = commands[process.argv[2]];
 cmd = cmd || commands.help;
-cmd.run(process.argv)
+Promise.resolve(cmd.run(process.argv))
 .catch(error.handle);
