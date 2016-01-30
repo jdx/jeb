@@ -9,9 +9,12 @@ let log      = require('npmlog');
 let config   = require('../lib/config');
 let minimist = require('minimist');
 
-let args = minimist(process.argv.slice(2));
-
+let args = minimist(process.argv.slice(2), {
+  boolean: ['offline']
+});
 log.level = args.loglevel || config.loglevel;
+log.verbose('args', args);
+if (args.offline) config.offline = true;
 
 let cmd = commands[args._[0]];
 cmd = cmd || commands.help;
