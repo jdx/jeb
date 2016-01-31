@@ -10,6 +10,7 @@
   "dependencies": {
     "archy": "1.0.0",
     "bluebird": "3.1.5",
+    "byline": "4.2.1",
     "chalk": "1.1.1",
     "find-root": "0.1.1",
     "got": "6.1.1",
