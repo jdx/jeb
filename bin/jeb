@@ -19,5 +19,9 @@ if (args.offline) config.offline = true;
 let cmd = commands[args._[0]];
 cmd = cmd || commands.help;
 
-Promise.resolve(cmd.run(args))
-.catch(error.handle);
+try {
+  Promise.resolve(cmd.run(args))
+  .catch(error.handle);
+} catch (err) {
+  error.handle(err);
+}
