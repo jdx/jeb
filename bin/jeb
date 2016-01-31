@@ -5,14 +5,14 @@
 let Promise  = require('bluebird');
 let commands = require('../lib/commands');
 let error    = require('../lib/error');
-let log      = require('npmlog');
+let log      = require('../lib/log');
 let config   = require('../lib/config');
 let minimist = require('minimist');
 
 let args = minimist(process.argv.slice(2), {
   boolean: ['offline']
 });
-log.level = args.loglevel || config.loglevel;
+config.loglevel = args.loglevel || config.loglevel;
 log.verbose('args', args);
 if (args.offline) config.offline = true;
 
