@@ -18,6 +18,7 @@
     "minimist": "1.2.0",
     "mkdirp": "0.5.1",
     "mz": "2.3.0",
+    "node-uuid": "1.4.7",
     "npmlog": "2.0.2",
     "observatory": "1.0.0",
     "osenv": "0.1.3",
