@@ -23,7 +23,6 @@
     "mz": "2.2.0",
     "node-gyp": "3.2.1",
     "node-uuid": "1.4.7",
-    "observatory": "1.0.0",
     "osenv": "0.1.3",
     "rimraf": "2.5.1",
     "semver": "5.1.0",

@@ -10,10 +10,10 @@ let config   = require('../lib/config');
 let minimist = require('minimist');
 
 let args = minimist(process.argv.slice(2), {
-  boolean: ['offline']
+  boolean: ['offline', 'verbose']
 });
-config.loglevel = args.loglevel || config.loglevel;
-log.verbose('args', args);
+config.verbose = args.verbose;
+log('args', args);
 if (args.offline) config.offline = true;
 
 let cmd = commands[args._[0]];
